@@ -1,0 +1,35 @@
+Pagina institucional:
+
+    --> Menu: 
+        - Inicio 
+        - Sobre 
+        - Atuação/ Seguimento
+        - Certificações 
+        - Portfólio 
+        - Contato
+
+    --> Inicio 
+
+    --> Sobre 
+
+    --> Atuação/ Seguimento
+    
+    --> Certificações
+
+    --> Portfólio 
+
+    --> Contato 
+    
+    --> Rodapé: 
+        - CNPJ
+        - Politica de privacidade
+        - "Desenvolvido por Afonso" -> Linkedin
+
+Duvidas:
+    - 
+    - 
+
+Ideias para atualizações futuras:
+    -
+    -
+    
