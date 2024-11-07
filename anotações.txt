@@ -7,7 +7,6 @@ Pagina institucional:
         - Certificações 
         - Portfólio 
         - Contato
-        - Historico
 
     --> Inicio 
 
