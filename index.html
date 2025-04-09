@@ -1,69 +1,400 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>SkyPack Suprimentos</title>
+        <title>Forcemaq Refrigeração</title>
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
-        <!-- <link rel="icon" href="assets/images/" type="image/x-icon"> -->
+        <link rel="icon" href="assets/imagens/logo-curta.png" type="image/x-icon">
     </head>
     
 <body>
-            
     <nav id="navigation" class="">
-        <h1>Titulo</h1>
-        <h2>Subtitulo</h2>
-        <p>Paragrafo</p>   
+        <div class="wrapper">
+            <div class="img-wrapper">
+                <a onclick="closeMenu()" class="logo-menu-celular" href="#home"> 
+                    <img src="./assets/imagens/logo.png" alt="">              
+                </a>
+            </div>
+            <button aria-expanded="true" aria-label="Fechar menu" onclick="closeMenu()" class="close-menu">                
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 10L10 30M10 10L30 30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button aria-expanded="false" aria-label="Abrir menu" onclick="openMenu()" class="open-menu" href="#">                
+                <svg width="40" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.864 20H30.864" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.864 12H30.864" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M18.864 28L30.864 28" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg> 
+            </button>
+            <div class="menu">                          
+                <ul>
+                    <li><a onclick="closeMenu()" href="#home" class="scroll-link">Início</a></li>
+                    <li><a onclick="closeMenu()" href="#sobre" class="scroll-link">Sobre</a></li>
+                    <li><a onclick="closeMenu()" href="#portifolio" class="scroll-link">Portfólio</a></li>
+                    <li><a onclick="closeMenu()" href="#atuacao" class="scroll-link">Depoimentos</a></li>
+                </ul>
+                <a onclick="closeMenu()" class="button-menu scroll-link" href="#contact">Contato</a>
+                <ul class="social-links">
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com/forcemaq_refrigeracao/">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve" width="24" height="24">
+                                <g>
+                                    <path d="M12,2.162c3.204,0,3.584,0.012,4.849,0.07c1.308,0.06,2.655,0.358,3.608,1.311c0.962,0.962,1.251,2.296,1.311,3.608   c0.058,1.265,0.07,1.645,0.07,4.849c0,3.204-0.012,3.584-0.07,4.849c-0.059,1.301-0.364,2.661-1.311,3.608   c-0.962,0.962-2.295,1.251-3.608,1.311c-1.265,0.058-1.645,0.07-4.849,0.07s-3.584-0.012-4.849-0.07   c-1.291-0.059-2.669-0.371-3.608-1.311c-0.957-0.957-1.251-2.304-1.311-3.608c-0.058-1.265-0.07-1.645-0.07-4.849   c0-3.204,0.012-3.584,0.07-4.849c0.059-1.296,0.367-2.664,1.311-3.608c0.96-0.96,2.299-1.251,3.608-1.311   C8.416,2.174,8.796,2.162,12,2.162 M12,0C8.741,0,8.332,0.014,7.052,0.072C5.197,0.157,3.355,0.673,2.014,2.014   C0.668,3.36,0.157,5.198,0.072,7.052C0.014,8.332,0,8.741,0,12c0,3.259,0.014,3.668,0.072,4.948c0.085,1.853,0.603,3.7,1.942,5.038   c1.345,1.345,3.186,1.857,5.038,1.942C8.332,23.986,8.741,24,12,24c3.259,0,3.668-0.014,4.948-0.072   c1.854-0.085,3.698-0.602,5.038-1.942c1.347-1.347,1.857-3.184,1.942-5.038C23.986,15.668,24,15.259,24,12   c0-3.259-0.014-3.668-0.072-4.948c-0.085-1.855-0.602-3.698-1.942-5.038c-1.343-1.343-3.189-1.858-5.038-1.942   C15.668,0.014,15.259,0,12,0z" fill="#ffff"/>
+                                    <path d="M12,5.838c-3.403,0-6.162,2.759-6.162,6.162c0,3.403,2.759,6.162,6.162,6.162s6.162-2.759,6.162-6.162   C18.162,8.597,15.403,5.838,12,5.838z M12,16c-2.209,0-4-1.791-4-4s1.791-4,4-4s4,1.791,4,4S14.209,16,12,16z" fill="#ffff"/>
+                                    <circle cx="18.406" cy="5.594" r="1.44" fill="#ffff"/>
+                                </g>
+                            </svg> 
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" 
+                        href="https://www.facebook.com/ForcemaqRefrigeracao/?locale=pt_BR"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 1.99997H15C13.6739 1.99997 12.4021 2.52675 11.4645 3.46444C10.5268 4.40212 10 5.67389 10 6.99997V9.99997H7V14H10V22H14V14H17L18 9.99997H14V6.99997C14 6.73475 14.1054 6.4804 14.2929 6.29286C14.4804 6.10533 14.7348 5.99997 15 5.99997H18V1.99997Z" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>    
+            </div>        
+        </div>                    
     </nav>
 
-    <section id="home" class="">
-
+    <section id="home" class="inicio">
+        <div class="wrapper">
+            <div class="titulo-inicio">
+                <h1>
+                    Os melhores sempre buscam o melhor
+                </h1>
+                <a href="#contact" class="button button-inicio scroll-link">
+                    <strong>Solicite orçamento</strong>
+                </a>
+            </div>
+        </div>
     </section>
     
-    <section id="about" class="">
-
+    <section id="sobre" class="sobre-celular">
+        <div class="sobre-box">
+            <div class="wrapper">
+                <div class="sobre-principal">
+                    <div class="sobre-principal-texto">
+                        <h2>Sobre nós</h2>
+                        <h1></h1>    
+                        <p>
+                            Na Forcemaq Refrigeração, compreendemos a importância da agilidade no atendimento quando se trata de refrigeração.<br>
+                            Com dez anos de atuação em Chapecó, desenvolvemos processos otimizados para garantir que nossos técnicos cheguem até você prontamente, resolvendo suas necessidades. Realizando a manutenção dos seus eletrodomésticos de forma eficiente. Sua comodidade é nossa prioridade.
+                        </p>
+                    </div>
+                    <div class="img-sobre-principal">
+                        <img src="assets/imagens/img-sobre-principal.png" alt="Foto com um homem segurando uma gelareira">
+                    </div>
+            </div>
+        </div>
+        <div class="sobre-box">
+            <div class="wrapper">
+                <div class="sobre-principal sobre-principal-topico">
+                    <div class="sobre-principal-texto">
+                        <h3>        
+                            Nossos produtos <br> e serviços
+                        </h3>    
+                        <p>
+                            A Forcemaq Refrigeração atua na montagem e manutenção de sistemas de refrigeração.
+                            Atendemos clientes residenciais, comerciais e industriais, sempre prezando pela qualidade, economia de energia e tecnologia de ponta .
+                        </p>
+                    </div>
+                    <div class="sobre-principal-texto">
+                        <h3>
+                            Nossos serviços incluem:
+                        </h3>
+                        <div class="sobre-pontuações">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14Z" fill="red"/>
+                                <path fillRule="evenodd" clipRule="evenodd" d="M19.9458 8.62169L11.5925 16.6834L9.37584 14.315C8.9675 13.93 8.32584 13.9067 7.85917 14.2334C7.40417 14.5717 7.27584 15.1667 7.55584 15.645L10.1808 19.915C10.4375 20.3117 10.8808 20.5567 11.3825 20.5567C11.8608 20.5567 12.3158 20.3117 12.5725 19.915C12.9925 19.3667 21.0075 9.81169 21.0075 9.81169C22.0575 8.73836 20.7858 7.79336 19.9458 8.61002V8.62169Z" fill="white"/>
+                            </svg>
+                            <p>
+                                Projeto, instalação e manutenção de câmaras frias
+                            </p>
+                        </div>
+                        <div class="sobre-pontuações">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14Z" fill="red"/>
+                                <path fillRule="evenodd" clipRule="evenodd" d="M19.9458 8.62169L11.5925 16.6834L9.37584 14.315C8.9675 13.93 8.32584 13.9067 7.85917 14.2334C7.40417 14.5717 7.27584 15.1667 7.55584 15.645L10.1808 19.915C10.4375 20.3117 10.8808 20.5567 11.3825 20.5567C11.8608 20.5567 12.3158 20.3117 12.5725 19.915C12.9925 19.3667 21.0075 9.81169 21.0075 9.81169C22.0575 8.73836 20.7858 7.79336 19.9458 8.61002V8.62169Z" fill="white"/>
+                            </svg>
+                            <p>
+                                Refrigeração Comercial
+                            </p>
+                        </div>
+                        <div class="sobre-pontuações">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14Z" fill="red"/>
+                                <path fillRule="evenodd" clipRule="evenodd" d="M19.9458 8.62169L11.5925 16.6834L9.37584 14.315C8.9675 13.93 8.32584 13.9067 7.85917 14.2334C7.40417 14.5717 7.27584 15.1667 7.55584 15.645L10.1808 19.915C10.4375 20.3117 10.8808 20.5567 11.3825 20.5567C11.8608 20.5567 12.3158 20.3117 12.5725 19.915C12.9925 19.3667 21.0075 9.81169 21.0075 9.81169C22.0575 8.73836 20.7858 7.79336 19.9458 8.61002V8.62169Z" fill="white"/>
+                            </svg>
+                            <p>
+                                Manutenção em Side By Side
+                            </p>
+                        </div>
+                        <div class="sobre-pontuações">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14Z" fill="red"/>
+                                <path fillRule="evenodd" clipRule="evenodd" d="M19.9458 8.62169L11.5925 16.6834L9.37584 14.315C8.9675 13.93 8.32584 13.9067 7.85917 14.2334C7.40417 14.5717 7.27584 15.1667 7.55584 15.645L10.1808 19.915C10.4375 20.3117 10.8808 20.5567 11.3825 20.5567C11.8608 20.5567 12.3158 20.3117 12.5725 19.915C12.9925 19.3667 21.0075 9.81169 21.0075 9.81169C22.0575 8.73836 20.7858 7.79336 19.9458 8.61002V8.62169Z" fill="white"/>
+                            </svg>
+                            <p>
+                                Manutenção de lava e seca
+                            </p>
+                        </div>
+                        <div class="sobre-pontuações">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14Z" fill="red"/>
+                                <path fillRule="evenodd" clipRule="evenodd" d="M19.9458 8.62169L11.5925 16.6834L9.37584 14.315C8.9675 13.93 8.32584 13.9067 7.85917 14.2334C7.40417 14.5717 7.27584 15.1667 7.55584 15.645L10.1808 19.915C10.4375 20.3117 10.8808 20.5567 11.3825 20.5567C11.8608 20.5567 12.3158 20.3117 12.5725 19.915C12.9925 19.3667 21.0075 9.81169 21.0075 9.81169C22.0575 8.73836 20.7858 7.79336 19.9458 8.61002V8.62169Z" fill="white"/>
+                            </svg>
+                            <p>
+                                Conserto de refrigeração 
+                            </p>
+                        </div>
+                        <div class="sobre-pontuações">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14Z" fill="red"/>
+                                <path fillRule="evenodd" clipRule="evenodd" d="M19.9458 8.62169L11.5925 16.6834L9.37584 14.315C8.9675 13.93 8.32584 13.9067 7.85917 14.2334C7.40417 14.5717 7.27584 15.1667 7.55584 15.645L10.1808 19.915C10.4375 20.3117 10.8808 20.5567 11.3825 20.5567C11.8608 20.5567 12.3158 20.3117 12.5725 19.915C12.9925 19.3667 21.0075 9.81169 21.0075 9.81169C22.0575 8.73836 20.7858 7.79336 19.9458 8.61002V8.62169Z" fill="white"/>
+                            </svg>
+                            <p>
+                                Conserto de Máquinas de lavar roupa
+                            </p>
+                        </div>
+                        <div class="sobre-pontuações">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14Z" fill="red"/>
+                                <path fillRule="evenodd" clipRule="evenodd" d="M19.9458 8.62169L11.5925 16.6834L9.37584 14.315C8.9675 13.93 8.32584 13.9067 7.85917 14.2334C7.40417 14.5717 7.27584 15.1667 7.55584 15.645L10.1808 19.915C10.4375 20.3117 10.8808 20.5567 11.3825 20.5567C11.8608 20.5567 12.3158 20.3117 12.5725 19.915C12.9925 19.3667 21.0075 9.81169 21.0075 9.81169C22.0575 8.73836 20.7858 7.79336 19.9458 8.61002V8.62169Z" fill="white"/>
+                            </svg>
+                            <p>
+                                Cervejeiras e expositores 
+                            </p>
+                        </div>
+                        <div class="sobre-pontuações">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14Z" fill="red"/>
+                                <path fillRule="evenodd" clipRule="evenodd" d="M19.9458 8.62169L11.5925 16.6834L9.37584 14.315C8.9675 13.93 8.32584 13.9067 7.85917 14.2334C7.40417 14.5717 7.27584 15.1667 7.55584 15.645L10.1808 19.915C10.4375 20.3117 10.8808 20.5567 11.3825 20.5567C11.8608 20.5567 12.3158 20.3117 12.5725 19.915C12.9925 19.3667 21.0075 9.81169 21.0075 9.81169C22.0575 8.73836 20.7858 7.79336 19.9458 8.61002V8.62169Z" fill="white"/>
+                            </svg>
+                            <p>
+                                Chillers
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-
-    <section id="expertises" class="">
-      
-    </section>
-    
-    <section id="Certifications" class="">
-
-    </section>
-
-    <section id="Projects" class="">
-
+   
+    <section id="portifolio" class="portfolio-celular">
+        <div class="wrapper">
+            <h2>Conheça nossos principais tipos de serviços</h2>
+            <h1></h1>
+            <div class="img-portfolio-celular">                
+                <div class="img-portfolio-descktop flip-card">                    
+                    <div class="flip-card-inner">            
+                        <div class="flip-card-front">                            
+                            <img src="assets/imagens/frezer.webp" alt="Foto de material de embalagem">
+                        </div>
+                        <div class="flip-card-back"> 
+                            <p>Freezer de Mercado</p>               
+                            <h1>Manutenção, conserto e higienização de freezers comerciais para garantir máxima eficiência, conservação dos produtos e economia de energia.</h1>            
+                        </div>   
+                    </div>
+                </div>
+                <div class="img-portfolio-descktop flip-card">                    
+                    <div class="flip-card-inner">            
+                        <div class="flip-card-front">     
+                            <img src="assets/imagens/camera.png" alt="Foto de material de mercearia">
+                        </div>
+                        <div class="flip-card-back">     
+                            <p>Câmaras Frias</p>               
+                            <h1>Instalação, manutenção preventiva e corretiva de câmaras frias, com foco em performance, segurança e controle preciso de temperatura para o seu negócio.</h1>            
+                        </div>      
+                    </div>
+                </div>
+                <div class="img-portfolio-descktop flip-card">                    
+                    <div class="flip-card-inner">            
+                        <div class="flip-card-front">                            
+                            <img src="assets/imagens/chiller-industrial-01.jpg" alt="Foto de material de escritório">
+                        </div>
+                        <div class="flip-card-back">    
+                            <p>Chillers Industriais</p>               
+                            <h1>Manutenção e suporte técnico para chillers industriais, com foco em alta performance, eficiência energética e operação sem interrupções.</h1>            
+                        </div>            
+                    </div>
+                </div>
+                <div class="img-portfolio-descktop flip-card">                    
+                    <div class="flip-card-inner">            
+                        <div class="flip-card-front">
+                            <img src="assets/imagens/cervejeiras.png" alt="Foto de material para mercearia">
+                        </div>
+                        <div class="flip-card-back">    
+                            <p>Cervejeiras e Expositores</p>               
+                            <h1>Serviço técnico completo para cervejeiras e expositores refrigerados, garantindo temperatura ideal, visual impecável e funcionamento contínuo.</h1>            
+                        </div>            
+                    </div>
+                </div>    
+                <div class="img-portfolio-descktop flip-card">                    
+                    <div class="flip-card-inner">            
+                        <div class="flip-card-front">                            
+                            <img src="assets/imagens/lava-e-seca.png" alt="Foto de material de limpeza">
+                        </div>
+                        <div class="flip-card-back">   
+                            <p>Lava e Seca</p>               
+                            <h1>Assistência técnica especializada em máquinas lava e seca: diagnóstico preciso, reparos rápidos e garantia de desempenho no dia a dia.</h1>            
+                        </div>             
+                    </div>
+                </div>
+                <div class="img-portfolio-descktop flip-card">                    
+                    <div class="flip-card-inner">            
+                        <div class="flip-card-front">                            
+                            <img src="assets/imagens/geladeira.webp" alt="Foto de material de informática">
+                        </div>
+                        <div class="flip-card-back">       
+                            <p>Geladeira Side by Side</p>               
+                            <h1>Atendimento técnico especializado em geladeiras: manutenção, reparo e cuidado com cada detalhe para preservar seus alimentos com eficiência e estilo.</h1>            
+                        </div>          
+                    </div>
+                </div>
+            </div>
+        </div>    
     </section>
 
     <section id="contact" class="contact-us">
-        
+        <div class="wrapper">    
+            <h2 class="contato-reveal">Entre em contato com a gente!</h2>
+            <p class="contato-reveal">Converse com um de nossos especialistas e tire todas as suas dúvidas!</p>             
+            <a class="button button-contact" href="https://wa.me/5549998224787?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20um%20especialista!" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12.8337 10.6667C12.667 10.5833 11.5837 10.0833 11.417 10C11.2503 9.91668 11.0837 9.91668 10.917 10.0833C10.7503 10.25 10.417 10.75 10.2503 10.9167C10.167 11.0833 10.0003 11.0833 9.83366 11C9.25033 10.75 8.66699 10.4167 8.16699 10C7.75033 9.58334 7.33366 9.08334 7.00033 8.58334C6.91699 8.41668 7.00033 8.25001 7.08366 8.16668C7.16699 8.08334 7.25033 7.91668 7.41699 7.83334C7.50033 7.75001 7.58366 7.58334 7.58366 7.50001C7.66699 7.41668 7.66699 7.25001 7.58366 7.16668C7.50033 7.08334 7.08366 6.08334 6.91699 5.66668C6.83366 5.08334 6.66699 5.08334 6.50033 5.08334C6.41699 5.08334 6.25033 5.08334 6.08366 5.08334C5.91699 5.08334 5.66699 5.25001 5.58366 5.33334C5.08366 5.83334 4.83366 6.41668 4.83366 7.08334C4.91699 7.83334 5.16699 8.58334 5.66699 9.25001C6.58366 10.5833 7.75033 11.6667 9.16699 12.3333C9.58366 12.5 9.91699 12.6667 10.3337 12.75C10.7503 12.9167 11.167 12.9167 11.667 12.8333C12.2503 12.75 12.7503 12.3333 13.0837 11.8333C13.2503 11.5 13.2503 11.1667 13.167 10.8333C13.167 10.8333 13.0003 10.75 12.8337 10.6667ZM14.917 3.08334C11.667 -0.166656 6.41699 -0.166656 3.16699 3.08334C0.500325 5.75001 0.000325501 9.83334 1.83366 13.0833L0.666992 17.3333L5.08366 16.1667C6.33366 16.8333 7.66699 17.1667 9.00033 17.1667C13.5837 17.1667 17.2503 13.5 17.2503 8.91668C17.3337 6.75001 16.417 4.66668 14.917 3.08334ZM12.667 14.75C11.5837 15.4167 10.3337 15.8333 9.00033 15.8333C7.75033 15.8333 6.58366 15.5 5.50033 14.9167L5.25033 14.75L2.66699 15.4167L3.33366 12.9167L3.16699 12.6667C1.16699 9.33334 2.16699 5.16668 5.41699 3.08334C8.66699 1.00001 12.8337 2.08334 14.8337 5.25001C16.8337 8.50001 15.917 12.75 12.667 14.75Z"
+                        fill="white"/>
+                </svg>
+                <strong>Agende sua consulta!</strong>
+            </a>           
+        </div>
+    
+    </section>
+    
+    <section id="contact-infos" class="contato-cel">
+        <div class="wrapper">           
+            <div class="infos">
+                <ul>                                    
+                    <div class="infos-stats">
+                        <h2>Endereço</h2>
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 19 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.41152 24.4956C1.31689 14.2105 0 13.1549 0 9.375C0 4.19731 4.19731 0 9.375 0C14.5527 0 18.75 4.19731 18.75 9.375C18.75 13.1549 17.4331 14.2105 10.3385 24.4956C9.8729 25.1682 8.87705 25.1681 8.41152 24.4956ZM9.375 13.2812C11.5324 13.2812 13.2812 11.5324 13.2812 9.375C13.2812 7.21763 11.5324 5.46875 9.375 5.46875C7.21763 5.46875 5.46875 7.21763 5.46875 9.375C5.46875 11.5324 7.21763 13.2812 9.375 13.2812Z" fill="black"/>
+                            </svg>
+                            <strong>R. Amaro Pozzebom, 304e - Efapi,<br> Chapecó, Santa Catarina - SC</strong>
+                        </li>            
+                    </div>                         
+                    <div class="infos-stats">
+                        <h2>Whatsapp</h2>
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_139_108)">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.6595 19.1294C23.2661 18.9132 21.3293 17.8802 20.9661 17.73C20.603 17.5799 20.3609 17.5078 20.0582 17.8982C19.7556 18.2886 18.9688 19.1535 18.7267 19.4117C18.4846 19.67 18.2485 19.694 17.8551 19.4778C16.6917 18.965 15.6268 18.2558 14.7078 17.3817C13.8605 16.5462 13.1426 15.5909 12.5772 14.5469C12.3594 14.1384 12.5773 13.9462 12.7831 13.736C12.9888 13.5258 13.2067 13.2856 13.3883 13.0634C13.5625 12.8702 13.7055 12.6514 13.812 12.4147C13.8719 12.3082 13.9033 12.1883 13.9033 12.0664C13.9033 11.9444 13.8719 11.8245 13.812 11.718C13.7212 11.5138 12.9949 9.52584 12.6862 8.71502C12.3775 7.90421 12.0446 8.03034 11.8146 8.01833C11.5846 8.00631 11.3123 7.97027 11.046 7.95826C10.8424 7.95502 10.6403 7.99395 10.4527 8.07254C10.2652 8.15114 10.0961 8.26768 9.95647 8.41472C9.48751 8.82472 9.10934 9.32674 8.84577 9.8891C8.5822 10.4515 8.43898 11.0619 8.42519 11.682C8.35255 13.64 9.72044 15.5859 9.90808 15.8562C10.0957 16.1264 12.5167 20.3727 16.5296 22.1204C20.5425 23.8682 20.5727 23.3216 21.3051 23.3216C22.0374 23.3216 23.7261 22.4448 24.0832 21.5198C24.3665 20.9358 24.4737 20.283 24.3919 19.64C24.2951 19.4718 24.0348 19.3577 23.6414 19.1475L23.6595 19.1294ZM16.2935 28.5649C13.7336 28.5675 11.2299 27.8195 9.09701 26.4147L4.07338 28.0123L5.70758 23.2075C3.98845 20.8481 3.11954 17.9833 3.24074 15.0743C3.36194 12.1653 4.46618 9.38137 6.37571 7.17085C8.28525 4.96033 10.8889 3.45182 13.7675 2.88822C16.6461 2.32462 19.632 2.73872 22.2446 4.06385C24.8572 5.38898 26.9443 7.54804 28.1699 10.1934C29.3955 12.8387 29.6884 15.8163 29.0012 18.6468C28.314 21.4774 26.6868 23.996 24.3817 25.7973C22.0766 27.5986 19.2276 28.5777 16.2935 28.5769V28.5649ZM16.2935 0.000303134C13.5108 -0.000487845 10.7778 0.73237 8.37417 2.12389C5.97056 3.5154 3.98266 5.51562 2.61391 7.91984C1.24515 10.3241 0.544675 13.046 0.584164 15.8071C0.623653 18.5681 1.4017 21.2692 2.83866 23.6339L0 32.0003L8.69756 29.2375C10.7994 30.4065 13.1437 31.081 15.5498 31.2089C17.9558 31.3368 20.3593 30.9147 22.575 29.9753C24.7907 29.0358 26.7594 27.604 28.3293 25.7902C29.8993 23.9765 31.0285 21.8292 31.63 19.514C32.2315 17.1987 32.2893 14.7773 31.7987 12.4364C31.3082 10.0956 30.2825 7.89773 28.8007 6.01236C27.3189 4.12699 25.4206 2.60445 23.2522 1.56209C21.0837 0.519732 18.703 -0.0145935 16.2935 0.000303134Z" fill="black"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_139_108">
+                                <rect width="32" height="32" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>                          
+                            <strong>(49) 9 9822-4787</strong>
+                        </li>
+                    </div>
+                    <div class="infos-stats">
+                        <h2>Email</h2>                    
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24.5264 6.19141C24.7168 6.04004 25 6.18164 25 6.4209V16.4062C25 17.7002 23.9502 18.75 22.6562 18.75H2.34375C1.0498 18.75 0 17.7002 0 16.4062V6.42578C0 6.18164 0.27832 6.04492 0.473633 6.19629C1.56738 7.0459 3.01758 8.125 7.99805 11.7432C9.02832 12.4951 10.7666 14.0771 12.5 14.0674C14.2432 14.082 16.0156 12.4658 17.0068 11.7432C21.9873 8.125 23.4326 7.04102 24.5264 6.19141ZM12.5 12.5C13.6328 12.5195 15.2637 11.0742 16.084 10.4785C22.5635 5.77637 23.0566 5.36621 24.5508 4.19434C24.834 3.97461 25 3.63281 25 3.27148V2.34375C25 1.0498 23.9502 0 22.6562 0H2.34375C1.0498 0 0 1.0498 0 2.34375V3.27148C0 3.63281 0.166016 3.96973 0.449219 4.19434C1.94336 5.36133 2.43652 5.77637 8.91602 10.4785C9.73633 11.0742 11.3672 12.5195 12.5 12.5Z" fill="black"/>
+                            </svg>
+                                
+                            <strong>engenharia@forcemaq.com.br</strong>
+                        </li>
+                    </div>
+                </ul>                    
+            </div>
+        </div>
+    
+    </section>
+
+    <section class="politica-privacidade">
+        <div class="wrapper">
+            <p>                
+                ©2025 Forcemaq Refrigeracao. Todos os direitos reservados.
+            </p>        
+        </div>
     </section>
 
     <footer class="footer">
+        <div class="wrapper">
+            <div class="footer-logo-links">
+                <div class="footer-logo">
+                    <a class="logo-footer" href="#home">
+                        <img src="./assets/imagens/logo-teste.png" alt="Logo Forcemaq">
+                    </a>  
+                </div>
+                <ul class="social-links-footer">
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com/forcemaq_refrigeracao">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve" width="24" height="24">
+                                <g>
+                                    <path d="M12,2.162c3.204,0,3.584,0.012,4.849,0.07c1.308,0.06,2.655,0.358,3.608,1.311c0.962,0.962,1.251,2.296,1.311,3.608   c0.058,1.265,0.07,1.645,0.07,4.849c0,3.204-0.012,3.584-0.07,4.849c-0.059,1.301-0.364,2.661-1.311,3.608   c-0.962,0.962-2.295,1.251-3.608,1.311c-1.265,0.058-1.645,0.07-4.849,0.07s-3.584-0.012-4.849-0.07   c-1.291-0.059-2.669-0.371-3.608-1.311c-0.957-0.957-1.251-2.304-1.311-3.608c-0.058-1.265-0.07-1.645-0.07-4.849   c0-3.204,0.012-3.584,0.07-4.849c0.059-1.296,0.367-2.664,1.311-3.608c0.96-0.96,2.299-1.251,3.608-1.311   C8.416,2.174,8.796,2.162,12,2.162 M12,0C8.741,0,8.332,0.014,7.052,0.072C5.197,0.157,3.355,0.673,2.014,2.014   C0.668,3.36,0.157,5.198,0.072,7.052C0.014,8.332,0,8.741,0,12c0,3.259,0.014,3.668,0.072,4.948c0.085,1.853,0.603,3.7,1.942,5.038   c1.345,1.345,3.186,1.857,5.038,1.942C8.332,23.986,8.741,24,12,24c3.259,0,3.668-0.014,4.948-0.072   c1.854-0.085,3.698-0.602,5.038-1.942c1.347-1.347,1.857-3.184,1.942-5.038C23.986,15.668,24,15.259,24,12   c0-3.259-0.014-3.668-0.072-4.948c-0.085-1.855-0.602-3.698-1.942-5.038c-1.343-1.343-3.189-1.858-5.038-1.942   C15.668,0.014,15.259,0,12,0z" fill="black"/>
+                                    <path d="M12,5.838c-3.403,0-6.162,2.759-6.162,6.162c0,3.403,2.759,6.162,6.162,6.162s6.162-2.759,6.162-6.162   C18.162,8.597,15.403,5.838,12,5.838z M12,16c-2.209,0-4-1.791-4-4s1.791-4,4-4s4,1.791,4,4S14.209,16,12,16z" fill="black"/>
+                                    <circle cx="18.406" cy="5.594" r="1.44" fill="black"/>
+                                </g>
+                            </svg>                             
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/ForcemaqRefrigeracao/?locale=pt_BR">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 1.99997H15C13.6739 1.99997 12.4021 2.52675 11.4645 3.46444C10.5268 4.40212 10 5.67389 10 6.99997V9.99997H7V14H10V22H14V14H17L18 9.99997H14V6.99997C14 6.73475 14.1054 6.4804 14.2929 6.29286C14.4804 6.10533 14.7348 5.99997 15 5.99997H18V1.99997Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a target="_blank" href="https://www.youtube.com/">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.5396 6.42C22.4208 5.94541 22.1789 5.51057 21.8382 5.15941C21.4976 4.80824 21.0703 4.55318 20.5996 4.42C18.8796 4 11.9996 4 11.9996 4C11.9996 4 5.1196 4 3.3996 4.46C2.92884 4.59318 2.50157 4.84824 2.16094 5.19941C1.82031 5.55057 1.57838 5.98541 1.4596 6.46C1.14481 8.20556 0.990831 9.97631 0.999595 11.75C0.988374 13.537 1.14236 15.3213 1.4596 17.08C1.59055 17.5398 1.8379 17.9581 2.17774 18.2945C2.51758 18.6308 2.93842 18.8738 3.3996 19C5.1196 19.46 11.9996 19.46 11.9996 19.46C11.9996 19.46 18.8796 19.46 20.5996 19C21.0703 18.8668 21.4976 18.6118 21.8382 18.2606C22.1789 17.9094 22.4208 17.4746 22.5396 17C22.852 15.2676 23.0059 13.5103 22.9996 11.75C23.0108 9.96295 22.8568 8.1787 22.5396 6.42Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9.75 15.02L15.5 11.75L9.75 8.48001V15.02Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+
+            <div class="desenvolvido">
+                <header> Desenvolvido por:</header>
+                <a href="https://www.linkedin.com/in/afonso-canalle-junior-43499293/" target="_blank">Afonso Canalle Jr</a>
+            </div>
+
+        </div>
             
     </footer>
 
-    <!-- <a class="backToTopButton" href="#home">
-        <svg id="" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="20" cy="20" r="20" fill="#01389F"/>
+    <a class="backToTopButton" href="#home">
+        <svg id="backToTopButtonDesktop" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="20" fill="black"/>
             <path d="M20 27V13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M13 20L20 13L27 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>    
-    </a> -->
+    </a>
 
-    <!-- <a class="WhatsappButtonFixed" href="" target="_blank">
-        <svg id="" width="40" height="40" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <a class="WhatsappButtonFixed" href="https://wa.me/5549998224787?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20um%20especialista!" target="_blank">
+        <svg id="backToTopButtonDesktop" width="40" height="40" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="30.5" cy="30.5" r="22.5" fill="white"/>
             <path d="M13.8645 41.292L21.2098 49.4813L10.445 51.7479L13.8645 41.292Z" fill="white"/>
             <path d="M5.42301 57.3174L18.7946 53.8026C22.569 55.8219 26.7976 56.8946 31.1034 56.8946C45.4845 56.8946 57.2042 45.175 57.2042 30.7938C57.2042 23.8161 54.4913 17.2567 49.567 12.332C47.1521 9.89287 44.2757 7.95895 41.1057 6.64299C37.9355 5.32697 34.535 4.6553 31.1025 4.66715C16.7218 4.66763 5.00257 16.3871 5.00257 30.768C5.00257 35.3066 6.17749 39.7176 8.37593 43.6231L4.81347 56.7024L4.58605 57.5374L5.42301 57.3174ZM19.3513 48.1352L12.1288 50.0334L14.0449 43.0155L14.1037 42.8003L13.9827 42.6128L13.4697 41.8176C13.4691 41.8167 13.4685 41.8158 13.4679 41.8149C11.3946 38.5029 10.2938 34.675 10.2909 30.7676C10.2911 19.3156 19.6255 9.98131 31.0776 9.98131C36.628 9.98131 41.8477 12.15 45.7579 16.0854L45.7598 16.0873C47.6956 18.0142 49.2297 20.3062 50.2731 22.8303C51.3165 25.3545 51.8486 28.0607 51.8384 30.792L51.8384 30.796C51.8888 42.2453 42.5568 51.5546 31.1034 51.5546C27.3707 51.5546 23.7131 50.546 20.509 48.6541C20.5086 48.6538 20.5081 48.6536 20.5076 48.6533L19.7356 48.1901L19.555 48.0817L19.3513 48.1352ZM38.6035 33.586L38.5911 33.581L38.5785 33.5766C38.2984 33.4791 37.9403 33.3566 37.5776 33.3969C37.1612 33.4431 36.8336 33.6829 36.5596 34.0698L36.5595 34.0698L36.5541 34.0777C36.1342 34.6951 34.9391 36.1207 34.5763 36.5354L34.5714 36.541L34.5666 36.5468C34.4364 36.7049 34.3563 36.73 34.304 36.7361C34.2282 36.7449 34.0779 36.7267 33.7882 36.576L33.7811 36.5723L33.7739 36.5689C33.6726 36.5202 33.5424 36.4641 33.3864 36.3969C32.4947 36.0128 30.7598 35.2654 28.7499 33.4693L28.7495 33.469C26.9047 31.8236 25.6733 29.796 25.2846 29.1484C25.161 28.9252 25.1885 28.8327 25.2028 28.7929C25.2334 28.7078 25.3099 28.6144 25.4895 28.4349C25.6999 28.2244 25.9578 27.9128 26.1903 27.6319C26.2907 27.5106 26.3863 27.3951 26.4714 27.2959C26.7968 26.9163 26.9544 26.5987 27.1322 26.2407C27.1495 26.2058 27.1669 26.1706 27.1848 26.1349L27.1849 26.135L27.19 26.1242C27.4884 25.4902 27.3229 24.9565 27.1331 24.5769C26.9901 24.2909 25.7091 21.1671 25.1868 19.8615L25.1868 19.8614L25.1841 19.8548C24.9024 19.1788 24.572 18.7802 24.1673 18.5857C23.8567 18.4365 23.5074 18.4376 23.3639 18.438C23.3391 18.4381 23.3204 18.4382 23.3092 18.4374L23.2925 18.4363H23.2759H22.0359C21.4804 18.4363 20.6666 18.6338 19.9629 19.3986L19.9628 19.3985L19.9555 19.4068C19.9128 19.4554 19.863 19.51 19.8075 19.5708C19.1316 20.3117 17.6092 21.9805 17.6092 25.0846C17.6092 26.7731 18.2221 28.4051 18.8518 29.6447C19.4786 30.8785 20.1442 31.7657 20.3133 31.9912L20.3138 31.9918C20.3268 32.0104 20.346 32.0386 20.3714 32.0757C20.9847 32.9737 25.1769 39.1123 31.446 41.8179C32.992 42.4991 34.1991 42.8929 35.1389 43.1801C36.7639 43.7026 38.2431 43.6162 39.3875 43.4565L39.3905 43.4561C40.1053 43.3518 41.1227 42.9268 42.0171 42.3518C42.8979 41.7856 43.7874 40.9927 44.1039 40.0799C44.3891 39.2913 44.534 38.5583 44.5829 37.9753C44.6073 37.6839 44.6085 37.4219 44.5881 37.2038C44.5701 37.0099 44.5294 36.7743 44.4161 36.5962C44.2551 36.3433 44.0194 36.19 43.7964 36.0713C43.6652 36.0014 43.4985 35.9244 43.3209 35.8424C43.2149 35.7934 43.105 35.7427 42.9964 35.6906C42.8474 35.619 42.5519 35.4751 42.1807 35.2942C40.9993 34.7185 39.0498 33.7686 38.6035 33.586Z" fill="#7bb825" stroke="white"/>
         </svg>        
-    </a>      -->
+    </a>     
 
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="assets/javascript/script.js"></script>
 </body>
 </html>
